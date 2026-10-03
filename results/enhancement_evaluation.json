@@ -1,0 +1,20 @@
+{
+  "num_images_evaluated": 30,
+  "original_images": {
+    "mean_brightness": 21.85,
+    "contrast": 32.05,
+    "entropy": 4.66,
+    "spatial_frequency": 4.77
+  },
+  "enhanced_images": {
+    "mean_brightness": 27.02,
+    "contrast": 37.86,
+    "entropy": 4.85,
+    "spatial_frequency": 5.27
+  },
+  "improvement_pct": {
+    "brightness": 23.66,
+    "contrast": 18.13,
+    "spatial_frequency": 10.48
+  }
+}

@@ -1,0 +1,5 @@
+# Resume Bullet Points
+
+- **Architected End-to-End Low-Light Computer Vision Pipeline:** Designed and implemented a two-stage perception architecture integrating zero-reference image enhancement (**Zero-DCE++**) with **YOLOv8** on the ExDark dataset (7,362 images across 12 categories), achieving a +224% increase in image brightness and +69% boost in spatial contrast without requiring paired ground-truth images.
+- **Engineered Real-Time Interactive Streamlit Web Application & Robustness Suite:** Built an interactive **Streamlit** dashboard for side-by-side low-light detection inference and benchmarked perception model resilience across 6 synthetic degradations (Gaussian noise, motion blur, contrast reduction, partial occlusion) using **PyTorch**, **OpenCV**, and **Ultralytics**.
+- **Developed Automated Modular Testing & Benchmark Framework:** Implemented dataset conversion scripts (COCO to YOLO), no-reference image quality metric evaluators (Spatial Frequency, Entropy, Contrast), and **PyTest** test suites, optimizing memory footprint for hardware compatibility on entry-level GPUs (NVIDIA RTX 3050).

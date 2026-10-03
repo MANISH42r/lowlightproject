@@ -1,0 +1,17 @@
+{
+  "pipeline": "Enhanced (Zero-DCE++ + YOLO)",
+  "model_path": "yolov8n.pt",
+  "dataset_yaml": "data\\enhanced_dataset.yaml",
+  "precision": 0.1685,
+  "recall": 0.0078,
+  "mAP50": 0.0004,
+  "mAP50_95": 0.0001,
+  "latency_ms": 21.47,
+  "fps": 46.57,
+  "speed_breakdown_ms": {
+    "preprocess": 0.6111893321697911,
+    "inference": 19.59301199919234,
+    "loss": 0.0001400010660290718,
+    "postprocess": 1.2684373371303082
+  }
+}

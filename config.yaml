@@ -1,0 +1,66 @@
+# Low-Light Robust Perception Configuration File
+
+system:
+  seed: 42
+  device: "cuda"  # automatically falls back to "cpu" if CUDA unavailable
+  num_workers: 2
+
+dataset:
+  raw_images_dir: "images/ExDark"
+  train_annotation_json: "annotations/exdark_train.json"
+  val_annotation_json: "annotations/exdark_val.json"
+  processed_dir: "data"
+  image_size: [384, 384]
+  num_classes: 12
+  categories:
+    - Bicycle
+    - Boat
+    - Bottle
+    - Bus
+    - Car
+    - Cat
+    - Chair
+    - Cup
+    - Dog
+    - Motorbike
+    - People
+    - Table
+
+enhancement:
+  model_type: "Zero-DCE++"
+  n_iterations: 8
+  scale_factor: 1
+  channels: 32
+  epochs: 15
+  batch_size: 16
+  lr: 0.0001
+  loss_weights:
+    spatial: 1.0
+    exposure: 10.0
+    color: 5.0
+    tv: 200.0
+  target_exposure: 0.6
+  save_dir: "checkpoints/enhancement"
+
+detection:
+  model_name: "yolov8n.pt"
+  epochs: 15
+  batch_size: 16
+  image_size: 384
+  lr0: 0.01
+  save_dir: "checkpoints/detection"
+  baseline_results_dir: "results/baseline"
+  enhanced_results_dir: "results/enhanced"
+
+evaluation:
+  results_dir: "results"
+  visualizations_dir: "results/visualizations"
+  figures_dir: "results/figures"
+
+robustness:
+  brightness_factor: 0.5
+  noise_std: 0.05
+  blur_kernel: 5
+  motion_blur_kernel: 9
+  contrast_factor: 0.5
+  occlusion_ratio: 0.2

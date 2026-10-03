@@ -1,0 +1,7 @@
+Metric,Baseline YOLO,Enhanced Zero-DCE++ + YOLO,Difference
+Precision,0.4614,0.1685,-0.2929
+Recall,0.0076,0.0078,0.0002
+mAP@50,0.001,0.0004,-0.0006
+mAP@50:95,0.0003,0.0001,-0.0002
+Latency (ms),21.05,21.47,0.42
+FPS,47.5,46.57,-0.93
