@@ -1,7 +1,10 @@
 streamlit
+ultralytics
 torch
 torchvision
+opencv-python-headless
 numpy
 pillow
-opencv-python-headless
-scikit-learn
+scikit-image
+lpips
+PyYAML
