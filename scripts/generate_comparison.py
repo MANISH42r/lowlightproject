@@ -1,4 +1,5 @@
 import os
+import sys
 import glob
 import json
 import yaml
@@ -6,6 +7,10 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 import matplotlib.pyplot as plt
+
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
 from detection.inference import YOLOObjectDetector
 from enhancement.inference import ZeroDCEEnhancer
